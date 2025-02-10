@@ -1,0 +1,174 @@
+/* DESIGN SYSTEM
+
+--01--COLORS */
+
+:root {
+    --Red: #ea5353;
+    --Cyan: #45d3d3;
+    --Orange: #fcaf4a;
+    --Blue: #549ef2;
+    --VeryDarkBlue: #4c4e61;
+    --GrayishBlue: #a3a5ae;
+    --VeryLightGray: #fafafa;
+    --text-dark: #4D4F62;
+    --text-light: #fafafa;
+    --font-extra-light: 200;
+    --font-regular: 400;
+    --font-semibold: 600;
+}
+
+/*
+--02--TYPOGRAPHY
+FONT FAMILY: Poppins
+
+FONT WEIGHT:
+Extra Light - 200
+Regular - 400 
+Semibold - 600
+*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* To make default rem 10px */
+    font-size: 62.5%;
+}
+
+/* Mobile First */
+
+body {
+    font-family: "Poppins", sans-serif;
+    padding: 3.2rem;
+    color: var(--text-dark);
+    background-color: #fafafa;
+}
+
+.cards__container {
+    margin-top: 8.5rem;
+}
+
+.cards__textbox {
+    margin-bottom: 7.6rem;
+    text-align: center;
+}
+
+.heading__one {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    letter-spacing: 0.17px;
+}
+
+.heading__one--bold {
+    font-weight: var(--font-semibold);
+}
+
+.heading__one--regular {
+    font-weight: var(--font-extra-light);
+}
+
+.heading__two {
+    font-size: 2rem;
+    font-weight: var(--font-semibold);
+}
+
+.cards__description {
+    font-size: 1.5rem;
+    margin-top: 1.6rem;
+}
+
+.cards__description,
+.card__description {
+    opacity: 50%;
+}
+
+.card__description {
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+}
+
+
+.card__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.card__item {
+    max-width: 31rem;
+    padding: 2.4rem;
+    border-radius: 5px;
+    background: var(--text-light);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.card__item--one {
+    border-top: 3.5px solid var(--Cyan);
+}
+
+.card__item--two {
+    border-top: 3.5px solid var(--Red);
+}
+
+.card__item--three {
+    border-top: 3.5px solid var(--Orange);
+}
+
+.card__item--four {
+    border-top: 3.5px solid var(--Blue);
+}
+
+.card__item-logo {
+    width: 5.7rem;
+    height: 5.7rem;
+    margin-top: 3.3rem;
+    margin-left: 20rem;
+}
+
+/* DESKTOP FOUR CARDS GRID */
+
+@media (min-width: 1200px) {
+    .cards__textbox {
+        margin: 6.4rem auto 6.4rem auto;
+        max-width: 54rem;
+    }
+
+    .heading__one {
+        font-size: 3.6rem;
+    }
+
+    .cards__container {
+        margin-top: 8rem;
+    }
+
+    .card__items {
+        display: grid;
+    }
+
+    .card__item--one {
+        grid-column: 1 / 2;
+        grid-row: 3 / 5;
+    }
+
+    .card__item--two {
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+    }
+
+    .card__item--three {
+        grid-column: 2 / 3;
+        grid-row: 4 / 7;
+    }
+
+    .card__item--four {
+        grid-column: 3 / 4;
+        grid-row: 3 / 5;
+    }
+}
