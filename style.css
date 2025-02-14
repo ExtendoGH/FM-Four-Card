@@ -10,6 +10,7 @@
     --VeryDarkBlue: #4c4e61;
     --GrayishBlue: #a3a5ae;
     --VeryLightGray: #fafafa;
+    --White: #fff;
     --text-dark: #4D4F62;
     --text-light: #fafafa;
     --font-extra-light: 200;
@@ -44,17 +45,17 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
-    padding: 3.2rem;
+    padding: 5.6rem 3rem;
     color: var(--text-dark);
     background-color: #fafafa;
 }
 
-.cards__container {
-    margin-top: 8.5rem;
-}
+/* .cards__container {
+    margin-top: 7rem;
+} */
 
 .cards__textbox {
-    margin-bottom: 7.6rem;
+    margin-bottom: 6rem;
     text-align: center;
 }
 
@@ -80,6 +81,7 @@ body {
 .cards__description {
     font-size: 1.5rem;
     margin-top: 1.6rem;
+    font-weight: var(--font-regular);
 }
 
 .cards__description,
@@ -98,14 +100,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 3.2rem;
 }
 
 .card__item {
+    background-color: var(--White);
     max-width: 31rem;
-    padding: 2.4rem;
+    padding: 3.2rem 3.2rem 4.7rem 3.2rem;
     border-radius: 5px;
-    background: var(--text-light);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -129,14 +131,14 @@ body {
     width: 5.7rem;
     height: 5.7rem;
     margin-top: 3.3rem;
-    margin-left: 20rem;
+    margin-left: 19rem;
 }
 
 /* DESKTOP FOUR CARDS GRID */
 
 @media (min-width: 1200px) {
     .cards__textbox {
-        margin: 6.4rem auto 6.4rem auto;
+        margin: 5.6rem auto 7.4rem auto;
         max-width: 54rem;
     }
 
@@ -144,8 +146,8 @@ body {
         font-size: 3.6rem;
     }
 
-    .cards__container {
-        margin-top: 8rem;
+    .card__item {
+        width: 350px;
     }
 
     .card__items {
